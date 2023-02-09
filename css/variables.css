@@ -1,0 +1,5 @@
+:root {
+    --color-primary: yellow;
+    --color-second: black;
+    /* var(--color-primary); */
+}

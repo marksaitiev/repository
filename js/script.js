@@ -1,32 +1,80 @@
 "use strict";
+/* Задание на урок:
+1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
+'Сколько фильмов вы уже посмотрели?'
+2) Создать объект personalMovieDB и в него поместить такие свойства:
+    - count - сюда передается ответ на первый вопрос
+    - movies - в это свойство поместить пустой объект
+    - actors - тоже поместить пустой объект
+    - genres - сюда поместить пустой массив
+    - privat - в это свойство поместить boolean(логическое) значение false
+3) Задайте пользователю по два раза вопросы:
+    - 'Один из последних просмотренных фильмов?'
+    - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+Записать ответы в объект movies в формате: 
+    movies: {
+        'logan': '8.1'
+    }
+Проверить, чтобы все работало без ошибок в консоли */
 
-// инкримент (увеличивает на единицу ) и дикримент  (уменьшает на единицу)
-
-let incr = 10,
-    decr = 10;
-
-// incr++; //  // - форма записи называется постфиксной
-// decr--; //  
 
 
-console.log(incr++);
-console.log(decr--);
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?','');
+const personalMovieDB = {
+        count: 'numberOfFilms',
+        movies: {},
+        actors: {},
+        genres: [],
+        privat: false
+};
 
-++incr; // - форма записи называется префиксной
---decr; //
+const question1 = prompt('Один из последних просмотренных фильмов?','');
+const question2 = prompt('На сколько оцените его','');
+const question3 = prompt('Один из последних просмотренных фильмов?','');
+const question4 = prompt('На сколько оцените его','');
 
-console.log(5%2);
+personalMovieDB.movies[question1] = question2;
+personalMovieDB.movies[question3] = question4;
 
-console.log(2 + 2 * 2 != '8');  
-console.log(2*4 == string); // == оператор сравнение   
-                            // === строгое сравнение
-                            
-                            // логические операторы и && работает только тогда когда 2 и больше являються правдивыми в выражении и это правда и это правда
-                            // логические операторы или || работает когда один из вариантов будет правдивым
-                            // ! - оператор отрицания - если была ложь , стала правда и наоборот
-                            // != - оператор неравенства 
-const isChecked = false,
-      isClose = false;
-console.log(isChecked || !isClose);
+console.log(personalMovieDB.movies);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+// const a = prompt('Один из последних просмотренних фильмов?',''),
+//       b = prompt('На сколько оцените его?',''),
+//       c = prompt('Один из последних просмотренних фильмов?',''),
+//       d = prompt('На сколько оцените его?','');
+
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+
+// console.log(personalMovieDB);
+
 
 

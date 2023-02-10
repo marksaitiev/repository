@@ -1,80 +1,48 @@
 "use strict";
-/* Задание на урок:
-1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
-'Сколько фильмов вы уже посмотрели?'
-2) Создать объект personalMovieDB и в него поместить такие свойства:
-    - count - сюда передается ответ на первый вопрос
-    - movies - в это свойство поместить пустой объект
-    - actors - тоже поместить пустой объект
-    - genres - сюда поместить пустой массив
-    - privat - в это свойство поместить boolean(логическое) значение false
-3) Задайте пользователю по два раза вопросы:
-    - 'Один из последних просмотренных фильмов?'
-    - 'На сколько оцените его?'
-Ответы стоит поместить в отдельные переменные
-Записать ответы в объект movies в формате: 
-    movies: {
-        'logan': '8.1'
-    }
-Проверить, чтобы все работало без ошибок в консоли */
 
+// Условия if - если , else - если 2 , если неверное условие if 
 
+if (4 == 9) {
+    console.log('ok!');
+} else {
+    console.log('error!');
+}
 
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?','');
-const personalMovieDB = {
-        count: 'numberOfFilms',
-        movies: {},
-        actors: {},
-        genres: [],
-        privat: false
-};
+// Условие превращает любой тип данных в булиновый 
 
-const question1 = prompt('Один из последних просмотренных фильмов?','');
-const question2 = prompt('На сколько оцените его','');
-const question3 = prompt('Один из последних просмотренных фильмов?','');
-const question4 = prompt('На сколько оцените его','');
+if (1) { // если знает будет одно , например 1 - то это всегда тру ,правда
+    console.log('ok!');
+} else {
+    console.log('error!');
+}
 
-personalMovieDB.movies[question1] = question2;
-personalMovieDB.movies[question3] = question4;
+const num = 48;
+if (num > 49) {
+    console.log('error');
+} else if (num > 100) {
+    console.log('mnogo');
+} else {
+    console.log('ok');
+}
 
-console.log(personalMovieDB.movies);
+// тернарный оператор , если это выполнилось (num === 50) после ? идёт действие в случаи правдивого условия 
+// и дальше после console.log('ok') : необходимо написать действие которое выполнится если  (num === 50)  не выполнится 
+/// оператор называется тернарным потому что в его работе учавствует 3 аргумента , единственный ДЖС тернарный оператор
 
+(num === 50) ? console.log('ok') : console.log('error');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     privat: false
-// };
-// const a = prompt('Один из последних просмотренних фильмов?',''),
-//       b = prompt('На сколько оцените его?',''),
-//       c = prompt('Один из последних просмотренних фильмов?',''),
-//       d = prompt('На сколько оцените его?','');
-
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
-
-// console.log(personalMovieDB);
-
-
-
+const numb = 50; 
+switch (numb) { // конструкция свич всегда идет на строгое сравнение, в отличии от других условий 
+    case 49:
+        console.log('Неверно');
+        break; // если вдруг намб будет равнятся 49 то что бы код не пошел дальше после консоль лог, брейк его останавливает
+    case 100:
+        console.log('Неверно');
+        break;
+    case 50:
+        console.log('В ТОЧКУ');
+        break;
+    default:   // и если вдруг ничего не подошло , выполнить действие по умолчанию
+        console.log('не в этот раз(');
+        break;
+}
